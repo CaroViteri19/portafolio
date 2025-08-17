@@ -1,38 +1,222 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - Carolina</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mi Portafolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="icon" href="assets/imagenes/Cajita.png" type="image/png">
 </head>
 <body>
-  <header>
-    <h1>👩‍💻 Carolina López</h1>
-    <p>Desarrolladora Web & Estudiante de Software</p>
-  </header>
+  <!-- Animación de fondo -->
+  <div class="ripple-background">
+    <div class="circle xxlarge shade1"></div>
+    <div class="circle xlarge shade2"></div>
+    <div class="circle large shade3"></div>
+    <div class="circle mediun shade4"></div>
+    <div class="circle small shade5"></div>
+  </div>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Soy una apasionada por la programación, con experiencia en proyectos web, bases de datos y más.</p>
-  </section>
+  <!-- Sidebar (Offcanvas) -->
+  <div class="d-flex flex-column flex-shrink-0 bg-dark text-white p-3" 
+     style="width: 80px; height: 100vh; position: fixed; top: 0; left: 0;">
+  <ul class="nav nav-pills flex-column mb-auto text-center">
+    <li class="nav-item mb-4">
+      <a href="#inicio" class="nav-link text-white" title="Inicio">
+        <i class="bi bi-house-door fs-3"></i>
+      </a>
+    </li>
+    <li class="nav-item mb-4">
+      <a href="#acerca" class="nav-link text-white" title="Acerca de">
+        <i class="bi bi-person fs-3"></i>
+      </a>
+    </li>
+    <li class="nav-item mb-4">
+      <a href="#proyectos" class="nav-link text-white" title="Proyectos">
+        <i class="bi bi-folder fs-3"></i>
+      </a>
+    </li>
+    <li class="nav-item mb-4">
+      <a href="#Lenguajes" class="nav-link text-white" title="Lenguajes">
+        <i class="bi bi-code-slash fs-3"></i>
+      </a>
+    </li>
+    <li class="nav-item mb-4">
+      <a href="#contacto" class="nav-link text-white" title="Contáctame">
+        <i class="bi bi-envelope fs-3"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+  
 
-  <section id="proyectos">
-    <h2>Proyectos destacados</h2>
-    <div class="proyecto">
-      <img src="assets/img/ciempies.png" alt="Proyecto CIEMPIÉS">
-      <h3>CIEMPIÉS</h3>
-      <p>Sistema para el seguimiento de movilidad escolar con PHP y MySQL.</p>
-      <a href="https://github.com/tuusuario/ciempies" target="_blank">Ver en GitHub</a>
+  <!-- Contenido principal -->
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <!-- Imagen a la izquierda -->
+      <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
+        <img src="assets/logo.png" alt="Imagen 1" 
+             class="img-fluid rounded" style="max-width: 250px;">
+      </div>
+
+      <!-- Texto a la derecha -->
+       
+      <div id="acerca" class="col-md-6 text-center text-md-start">
+        <h1 class="text-white">Acerca de mí</h1>
+        <p class="text-white">
+          Desarrolladora Full-Stack con experiencia en gestión de proyectos educativos y tecnológicos. 
+          Combino habilidades en Java, Spring Boot, React y SQL con un enfoque en calidad de software y 
+          optimización de procesos. He trabajado en aplicaciones web como Ciempies, integrando bases de 
+          datos relacionales, módulos de asistencia y formularios dinámicos para mejorar la inclusión 
+          y la gestión escolar.
+        </p>
+      </div>
+    </div>
+   <!-- Contenedor de proyectos -->
+<div id="proyectos" class="proyectos">
+  <h2 class="text-white mt-5">Proyectos Destacados</h2>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <!-- Parte frontal -->
+      <div class="card-front">
+        <img src="assets/logo.jpeg" alt="Proyecto Ciempies" class="card-img" />
+        <h3 class="card-name">Ciempies</h3>
+      </div>
+      <!-- Parte trasera -->
+      <div class="card-back">
+        <div class="card-info">
+          <p>
+            Es un sistema de gestión interna desarrollado como práctica académica. 
+            Organiza y administra módulos funcionales como usuarios, roles y reportes.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/santiago-r21/Ciempies_SGI.gitt" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- MoodBox -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <!-- Parte frontal -->
+      <div class="card-front">
+        <img src="assets/moodbox.png" alt="Proyecto MoodBox" class="card-img" />
+        <h3 class="card-name">MoodBox</h3>
+      </div>
+      <!-- Parte trasera -->
+      <div class="card-back">
+        <div class="card-info">
+          <p>
+            Es una aplicación web que permite al usuario seleccionar y visualizar diferentes estados de ánimo mediante un diseño interactivo y dinámico.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/PipeAlf/MoodBox8AP.git" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GuitarBlog -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <!-- Parte frontal -->
+      <div class="card-front">
+        <img src="assets/guitar.jpg" alt="Proyecto GuitarBlog" class="card-img" />
+        <h3 class="card-name">GuitarBlog</h3>
+      </div>
+      <!-- Parte trasera -->
+      <div class="card-back">
+        <div class="card-info">
+          <p>
+            Es una aplicación web tipo blog desarrollada como práctica de diseño con Bootstrap 5, enfocada en el mundo de la música y la guitarra.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/JuanoBQ/Lab-Blog-21-Bootstrap.git" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="Lenguajes"class="text-center my-5">
+  <h2 class="text-white mb-4">⚡ Lenguajes y Tecnologías </h2>
+  <br>
+<div id="techCarousel" class="carousel slide p-3" data-bs-ride="carousel">
+  <div class="carousel-inner text-center" style="height:120px;">
+    <!-- Item 1 -->
+    <div class="carousel-item active">
+      <img src="assets/java (1).png" class="d-inline-block" alt="Java" style="height:100px;">
+    </div>
+    <!-- Item 2 -->
+    <div class="carousel-item">
+      <img src="assets/spring-3.svg" class="d-inline-block" alt="Spring Boot" style="height:100px;">
+    </div>
+    <!-- Item 3 -->
+    <div class="carousel-item">
+      <img src="assets/sql.png" class="d-inline-block" alt="SQL" style="height:100px;">
+    </div>
+    <!-- Item 5 -->
+    <div class="carousel-item">
+      <img src="assets/js.png" class="d-inline-block" alt="JavaScript" style="height:100px;">
     </div>
   </section>
+  <section id="contacto" class="text-center my-5">
+  <h2 class="text-white mb-4">📬 Contáctame</h2>
+  <p class="text-light">Puedes escribirme directamente o usar el formulario.</p>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📧 carolina.lopez@email.com</p>
-    <a href="cv/carolina_lopez_cv.pdf" download>📄 Descargar CV</a>
-  </section>
+  <!-- Links de contacto -->
+  <div id="contacto" class="d-flex justify-content-center gap-4 mb-4">
+    <a href="https://www.linkedin.com/in/caro-viteri0919/" target="_blank" class="text-white fs-3">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="https://wa.me/573214139301" target="_blank" class="text-white fs-3">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="mailto:kritho0311@gmail.com" class="text-white fs-3">
+      <i class="bi bi-envelope-fill"></i>
+    </a>
+  </div>
 
+  <!-- Formulario con Formspree -->
+  <div class="container" style="max-width: 400px;">
+    <form action="https://formspree.io/f/movlzlgk" method="POST" class="bg-dark p-4 rounded shadow">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Tu Email" required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-20 ">Enviar ✉️</button>
+    </form>
+  </div>
+</section>
+
+      <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>

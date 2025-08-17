@@ -1,0 +1,219 @@
+/* 🔹 Fondo animado */
+body {
+  background: #272727;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Círculos animados */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(106, 76, 109, 0.829);
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #9763af;
+  z-index: -1; /* 🔥 para que no tape nada */
+  top: 50px;   /* 🔥 mueve la animación un poco hacia abajo */
+}
+
+.small {
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.medium {
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.large {
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+
+.xlarge {
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+
+.xxlarge {
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px;
+}
+
+.shade1 { opacity: 0.2; }
+.shade2 { opacity: 0.5; }
+.shade3 { opacity: 0.7; }
+.shade4 { opacity: 0.8; }
+.shade5 { opacity: 0.9; }
+
+@keyframes ripple {
+  0%   { transform: scale(0.8); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(0.8); }
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #1a1a1a;
+  color: white;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #7B2CBF; /* Morado */
+}
+
+/* 🔹 Contenido principal */
+.content {
+  margin-left: 220px;
+  padding: 40px 20px; /* 🔥 más espacio */
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 80px; /* 🔥 más separación entre secciones */
+}
+
+/* 🔹 Sección de imágenes */
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12vh;
+  gap: 6vw;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+
+.imagenes img {
+  width: 220px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.imagen-circular-blur {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: blur(0.5px);
+}
+
+/* 🔹 Cards con efecto flip */
+.card-wrapper {
+  perspective: 1000px;
+  margin-bottom: 40px; /* 🔥 más separación */
+}
+
+.card-flip {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #1c1c1c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-front .card-name {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-info p {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+/* 🔹 Social Links */
+.social-links a {
+  color: white;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #9d4edd;
+}
+
+.social-links a i {
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a i:hover {
+  transform: scale(1.2);
+  color: #a259ff;
+}

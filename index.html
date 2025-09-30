@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <!-- Animación de fondo -->
+  <div class="ripple-background" aria-hidden="true">
+    <div class="circle xxlarge shade1"></div>
+    <div class="circle xlarge shade2"></div>
+    <div class="circle large shade3"></div>
+    <div class="circle medium shade4"></div>
+    <div class="circle small shade5"></div>
+  </div>
+ 
+
+<!-- Navbar fija superior -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Barra de navegación principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#inicio">
+      <img src="assets/logo.png" alt="Logo" width="28" height="28" class="me-2" style="object-fit:cover;border-radius:6px;"/>
+      <span>Carolina Viteri</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#acerca">Acerca de mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Lenguajes">Tecnologías</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  
+
+  <!-- Contenido principal -->
+  <!-- Hero / Inicio -->
+  <section id="inicio" class="hero d-flex align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-duration="900">
+    <div class="container">
+      <p class="text-gradient mb-2">Hola, soy</p>
+      <h1 class="display-5 fw-bold text-white mb-2">Carolina López</h1>
+      <p class="lead text-light mb-4">Desarrolladora Full-Stack · Educación, impacto social y tecnología</p>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="#proyectos" class="btn btn-primary btn-lg" aria-label="Ver proyectos">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline-light btn-lg" aria-label="Contactarme">Contactarme</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-5">
+    <div class="row align-items-center" data-aos="fade-up" data-aos-duration="800">
+      <!-- Imagen a la izquierda -->
+      <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
+        <img src="assets/fotoperfil.jpeg" alt="Foto de Carolina Viteri" 
+             class="avatar-photo shadow-lg" loading="lazy">
+      </div>
+
+      <!-- Texto a la derecha -->
+       
+      <div id="acerca" class="col-md-6 text-center text-md-start">
+        <h1 class="text-white">Acerca de mí</h1>
+        <p class="text-white">
+          Soy desarrolladora <strong>Full-Stack</strong> con foco en construir productos que impacten positivamente 
+          en educación y sociedad. Disfruto transformar requerimientos en soluciones claras y escalables, 
+          desde el backend con <strong>Java</strong> y <strong>Spring Boot</strong> hasta el frontend y <strong>Bootstrap 5</strong>.
+          He liderado y contribuido a proyectos con <strong>SQL</strong>, autenticación,  
+          y despliegues en la nube. Me motiva la calidad: pruebas, accesibilidad y buenas prácticas de UI.
+        </p>
+        <ul class="text-light small">
+          <li>Arquitectura modular, APIs REST y seguridad básica.</li>
+          <li>Componentes reutilizables, estados claros y diseño responsive.</li>
+          <li>Enfoque en usabilidad, accesibilidad y rendimiento.</li>
+        </ul>
+      </div>
+    </div>
+   <!-- Contenedor de proyectos -->
+<div id="proyectos" class="proyectos" data-aos="fade-up" data-aos-duration="800">
+  <h2 class="text-white mt-5">Proyectos Destacados</h2>
+  <div class="row g-4">
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <!-- Parte frontal -->
+      <div class="card-front">
+         <img src="assets/logo.jpeg" alt="Proyecto Ciempies" class="card-img" loading="lazy" />
+        <h3 class="card-name">Ciempies</h3>
+      </div>
+      <!-- Parte trasera -->
+      <div class="card-back">
+        <div class="card-info">
+          <p> <span style="color: white;">
+            Es un sistema de gestión interna desarrollado como práctica académica. 
+            Organiza y administra módulos funcionales como usuarios, roles y reportes.
+            </span>
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-outline-light btn-sm" href="https://github.com/santiago-r21/Ciempies_SGI.gitt" target="_blank" aria-label="Ver repositorio Ciempies en GitHub">
+              <i class="bi bi-github me-1"></i> Código
+            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank" aria-label="Ver demo de Ciempies">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- MoodBox -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <!-- Parte frontal -->
+      <div class="card-front">
+         <img src="assets/moodbox.png" alt="Proyecto MoodBox" class="card-img" loading="lazy" />
+        <h3 class="card-name">MoodBox</h3>
+      </div>
+      <!-- Parte trasera -->
+      <div class="card-back">
+        <div class="card-info">
+          <p>
+  <span style="color: white;">
+    E-commerce orientado al desarrollo tecnológico, construido con Java, Spring Boot, HTML, CSS y JavaScript.
+     Ofrecemos soluciones escalables y seguras para la venta en línea, integrando diseño moderno con arquitectura robusta.
+  </span>
+</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-outline-light btn-sm" href="https://main.drkoft4my5rgd.amplifyapp.com/" target="_blank" aria-label="Ver repositorio MoodBox en GitHub">
+              <i class="bi bi-github me-1"></i> Código
+            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank" aria-label="Ver demo de MoodBox">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GuitarBlog -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <!-- Parte frontal -->
+      <div class="card-front">
+         <img src="assets/guitar.jpg" alt="Proyecto GuitarBlog" class="card-img" loading="lazy" />
+        <h3 class="card-name">GuitarBlog</h3>
+      </div>
+      <!-- Parte trasera -->
+      <div class="card-back">
+        <div class="card-info">
+          <p><span style="color: white;">
+            Es una aplicación web tipo blog desarrollada como práctica de diseño con Bootstrap 5, 
+            enfocada en el mundo de la música y la guitarra.
+          </span>
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-outline-light btn-sm" href="https://github.com/JuanoBQ/Lab-Blog-21-Bootstrap.git" target="_blank" aria-label="Ver repositorio GuitarBlog en GitHub">
+              <i class="bi bi-github me-1"></i> Código
+            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank" aria-label="Ver demo de GuitarBlog">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ChatApp -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="assets/PokeApi.png" alt="Proyecto ChatApp" class="card-img" loading="lazy" />
+        <h3 class="card-name">PokeApi</h3>
+      </div>
+      <div class="card-back">
+        <div class="card-info">
+          <p><span style="color: white;">
+            API REST de Pokémon con endpoints para especies, habilidades y tipos. Ideal para integraciones y apps interactivas.
+            </span>
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-outline-light btn-sm" href="#" target="_blank" aria-label="Ver repositorio ChatApp en GitHub">
+              <i class="bi bi-github me-1"></i> Código
+            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank" aria-label="Ver demo de ChatApp">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EduTrack -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="assets/nasa.jpg" alt="Proyecto EduTrack" class="card-img" loading="lazy" />
+        <h3 class="card-name">API Nasa</h3>
+      </div>
+      <div class="card-back">
+        <div class="card-info">
+          <p><span style="color: white;">
+            API Nasa <strong>HTML</strong> y <strong>CSS</strong>. Esta API proporciona acceso a datos e imágenes espaciales en tiempo real, s
+            imágenes diarias de la Tierra y contenido astronómico educativo.
+            </span>
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-outline-light btn-sm" href="#" target="_blank" aria-label="Ver repositorio EduTrack en GitHub">
+              <i class="bi bi-github me-1"></i> Código
+            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank" aria-label="Ver demo de EduTrack">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EcoStore -->
+<div class="col-md-6 col-lg-4 card-wrapper">
+  <div class="card-flip">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="assets/apnea.jpg" alt="Proyecto EcoStore" class="card-img" loading="lazy" />
+        <h3 class="card-name">Freediving</h3>
+      </div>
+      <div class="card-back">
+        <div class="card-info">
+          <p><span style="color: white;">
+            Blog dedicado a la apnea deportiva: técnicas, entrenamiento, salud y experiencias bajo el agua. 
+            Inspiración para amantes del buceo libre.
+            </span>
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-outline-light btn-sm" href="#" target="_blank" aria-label="Ver repositorio EcoStore en GitHub">
+              <i class="bi bi-github me-1"></i> Código
+            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank" aria-label="Ver demo de EcoStore">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="Lenguajes" class="text-center my-5" data-aos="fade-up" data-aos-duration="800">
+  <h2 class="text-white mb-4">⚡ Lenguajes y Tecnologías </h2>
+  <br>
+<!-- Mobile: Carrusel -->
+<div id="techCarousel" class="carousel slide p-3 d-md-none" data-bs-ride="carousel" aria-label="Carrusel de tecnologías">
+  <div class="carousel-inner text-center" style="height:120px;">
+    <!-- Item 1 -->
+    <div class="carousel-item active">
+      <img src="assets/java (1).png" class="d-inline-block" alt="Java" style="height:100px;">
+    </div>
+    <!-- Item 2 -->
+    <div class="carousel-item">
+      <img src="assets/spring-3.svg" class="d-inline-block" alt="Spring Boot" style="height:100px;">
+    </div>
+    <!-- Item 3 -->
+    <div class="carousel-item">
+      <img src="assets/sql.png" class="d-inline-block" alt="SQL" style="height:100px;">
+    </div>
+    <!-- Item 5 -->
+    <div class="carousel-item">
+      <img src="assets/js.png" class="d-inline-block" alt="JavaScript" style="height:100px;">
+    </div>
+    <!-- React -->
+    <div class="carousel-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="d-inline-block" alt="React" style="height:100px;">
+    </div>
+    <!-- Docker -->
+    <div class="carousel-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="d-inline-block" alt="Docker" style="height:100px;">
+    </div>
+    <!-- Git -->
+    <div class="carousel-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="d-inline-block" alt="Git" style="height:100px;">
+    </div>
+    <!-- Firebase -->
+    <div class="carousel-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="d-inline-block" alt="Firebase" style="height:100px;">
+    </div>
+    <!-- Tailwind CSS -->
+    <div class="carousel-item">
+      <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss-jit/main/.github/logo.svg" class="d-inline-block" alt="Tailwind CSS" style="height:100px;">
+    </div>
+  </div>
+</div>
+
+<!-- Desktop/Tablet: Grid de tecnologías -->
+<div class="container d-none d-md-block" aria-label="Lista de tecnologías">
+  <div class="row g-4 justify-content-center">
+    <div class="col-3 col-lg-2 text-center"><img src="assets/java (1).png" class="img-fluid tech-icon" alt="Java" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="assets/spring-3.svg" class="img-fluid tech-icon" alt="Spring Boot" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="assets/sql.png" class="img-fluid tech-icon" alt="SQL" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="assets/js.png" class="img-fluid tech-icon" alt="JavaScript" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="img-fluid tech-icon" alt="React" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="img-fluid tech-icon" alt="Docker" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="img-fluid tech-icon" alt="Git" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="img-fluid tech-icon" alt="Firebase" loading="lazy"></div>
+    <div class="col-3 col-lg-2 text-center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" class="img-fluid tech-icon" alt="Tailwind CSS" loading="lazy"></div>
+  </div>
+</div>
+  </section>
+  <section id="contacto" class="text-center my-5" data-aos="fade-up" data-aos-duration="800">
+  <h2 class="text-white mb-4">📬 Contáctame</h2>
+  <p class="text-light">Puedes escribirme directamente o usar el formulario.</p>
+
+  <!-- Links de contacto -->
+  <div id="contacto-links" class="d-flex justify-content-center gap-4 mb-4">
+    <a href="https://www.linkedin.com/in/caro-viteri0919/" target="_blank" class="text-white fs-3" aria-label="Ir a mi LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="https://wa.me/573214139301" target="_blank" class="text-white fs-3" aria-label="Escríbeme por WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="mailto:kritho0311@gmail.com" class="text-white fs-3" aria-label="Envíame un correo">
+      <i class="bi bi-envelope-fill"></i>
+    </a>
+  </div>
+
+  <!-- Formulario con Formspree -->
+  <div class="container" style="max-width: 400px;">
+    <form action="https://formspree.io/f/movlzlgk" method="POST" class="bg-dark p-4 rounded shadow" aria-label="Formulario de contacto">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Tu Nombre" aria-label="Tu nombre" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Tu Email" aria-label="Tu correo electrónico" required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="4" placeholder="Escribe tu mensaje..." aria-label="Tu mensaje" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-20 ">Enviar ✉️</button>
+    </form>
+  </div>
+</section>
+
+      <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
